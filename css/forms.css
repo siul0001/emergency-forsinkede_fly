@@ -1,10 +1,10 @@
 #webform {
-  background-color: var(--form-background-color);
+  background-color:#FFFEF8;
 }
 
 #form-section,
 #form-summary {
-  background-color: var(--info-background-color);
+  background-color:#FFFEF8;
   padding: 0;
 }
 #form-summary h2 {
@@ -29,4 +29,61 @@
   line-height: 1.3;
   margin: 0 0 1.2rem 0;
   padding: 0;
+}
+
+.form1{
+  text-align: center;
+  display: block;
+  padding: 10px;
+}
+
+#afrejse{
+  width: 200px;
+}
+#ankomst{
+  width: 200px;
+}
+
+
+#sum div{
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+  gap: 0.5rem;
+}
+
+
+#varighed{
+  width: 170px;
+}
+
+.checkbox{
+  text-align: center;
+}
+
+#submit_btn{
+  margin-top: 100px;
+  margin-left: 300px;
+  margin-bottom:60px ;
+  background-color: #174573;
+  color: #FFFEF8;
+  height: 45px;
+  width: 110px;
+}
+
+#reset_btn{
+  margin-top: 225px;
+  margin-left: 110px;
+  margin-bottom:60px ;
+  background-color: #174573;
+  color: #FFFEF8;
+  height: 45px;
+  width: 110px;
+}
+
+.udfyld{
+  text-align: center;
+}
+
+h4{
+  text-align: center;
 }

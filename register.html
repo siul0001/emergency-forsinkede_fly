@@ -26,18 +26,134 @@
     </header>
 
     <main>
-      <h1>INDBERET</h1>
+      <h1>HAR DU RET TIL KOMPENSATION?</h1>
       <section id="form-section">
+        <h2 class="udfyld">UDFYLD DETALJERNE FOR DIN REJSE HER</h2>
         <article id="form-info">
-          <h2>Overskrift</h2>
-          <p>Tekst</p>
+          <h4>Passageroplysninger:</h4>
         </article>
-        <form id="webform"></form>
+        <form id="webform">
+          
+          <div class="form1">
+          <label for="f_navn"></label>
+          <input id="f_navn" type="text" placeholder="Fornavn" required />
+          <label for="e_navn"></label>
+          <input id="e_navn" type="text" placeholder="Efternavn" required />
+          </div>
+          <div class="form1">
+            <label for="booking-nr"></label>
+            <input id="booking-nr" type="text" placeholder="Bookingnummer" required />
+            <label for="fly-nr"></label>
+            <input id="fly-nr" type="text" placeholder="Flynummer" required />
+          </div>
+          <div class="form1">
+            <select name="afrejse" id="afrejse">
+              <option value="" disabled selected>Afrejselufthavn</option>
+              <option value="Københavns lufthavn">København (CPH)</option>
+              <option value="Billund lufthavn">Billund (BLL)</option>
+              <option value="Rønne lufthavn">Rønne (RNN)</option>
+              <option value="Aalborg lufthavn">Aalborg (AAL)</option>
+              <option value="Aarhus lufthavn">Aarhus(AAR)</option>
+            </select>
+            <select name="ankomst" id="ankomst">
+              <option value="" disabled selected>Ankomstlufthavn</option>
+              <option value="Københavns lufthavn">København (CPH)</option>
+              <option value="Billund lufthavn">Billund (BLL)</option>
+              <option value="Rønne lufthavn">Rønne (RNN)</option>
+              <option value="Aalborg lufthavn">Aalborg (AAL)</option>
+              <option value="Aarhus lufthavn">Aarhus(AAR)</option>
+            </select>
+          </div>
+          <div class="form1">
+            <label for="planlagt"></label>
+            <input id="planlagt" type="date" />
+            <label for="tid"></label>
+            <input id="tid" type="time">
+          </div>
+          <h4>Forsinkelsesdetaljer:</h4>
+          <div class="form1">
+            <select name="varighed" id="varighed">
+              <option value="" disabled selected>Varighed på forsinkelsen</option>
+              <option value="Mindre end 3 timer">Mindre end 3 timer</option>
+              <option value="Mellem 3 og 4 timer">Mellem 3 og 4 timer</option>
+              <option value="Mere end 4 timer">Mere end 4 timer</option>
+              <option value="Jeg kom aldrig frem til min endelige destination">Jeg kom aldrig frem til min endelige destination</option>
+            </select>
+            <select name="årsag" id="årsag">
+              <option value="" disabled selected>Årsag (Hvis oplyst)</option>
+              <option value="Mit fly var aflyst">Mit fly var aflyst</option>
+              <option value="Mit fly var forsinket">Mit fly var forsinket</option>
+              <option value="Jeg var nægtet boarding">Jeg var nægtet boarding</option>
+              <option value="Jeg havde et andet flyproblem">Jeg havde et andet flyproblem</option>
+            </select>
+            <select name="flyselskab" id="flyselskab">
+              <option value="" disabled selected>Flyselskab</option>
+              <option value="SAS">SAS</option>
+              <option value="Norwegian">Norwegian</option>
+              <option value="Easyjet">Easyjet</option>
+              <option value="Ryanair">Ryanair</option>
+            </select>
+          </div>
+          <div class="checkbox">
+            <p>Jeg bekræfter hermed, at oplysningerne ovenfor er korrekte:</p>
+            <label for="checkbox">JA</label>
+            <input id="checkbox" type="checkbox">
+            <label for="checkbox">NEJ</label>
+            <input id="checkbox" type="checkbox">
+          </div>
+        </form>
+        <button id="submit_btn">Indsend &#8594</button>
       </section>
       <section id="form-summary">
         <h2>Summary</h2>
-        <article>
-          <p class="placeholder">Opsummering</p>
+        <article id="sum">
+          <div>
+            <h3>Navn</h3>
+            <p id="sumName"></p>
+          </div>
+          <div>
+            <h3>Efternavn</h3>
+            <p id="sumLastname"></p>
+          </div>
+          <div>
+            <h3>Bookingnummer</h3>
+            <p id="sumBooking"></p>
+          </div>
+          <div>
+            <h3>Flynummer</h3>
+            <p id="sumFly"></p>
+          </div>
+          <div>
+            <h3>Afrejselufthavn</h3>
+            <p id="sumAfrejse"></p>
+          </div>
+          <div>
+            <h3>Ankomstlufthavn</h3>
+            <p id="sumAnkomst"></p>
+          </div>
+          <div>
+            <h3>Planlagt afgang</h3>
+            <p id="sumPlanlagt"></p>
+          </div>
+          <div>
+            <h3>Tidspunkt</h3>
+            <p id="sumTid"></p>
+          </div>
+          <div>
+            <h3>Varighed på forsinkelsen</h3>
+            <p id="sumVarighed"></p>
+          </div>
+          <div>
+            <h3>Årsag</h3>
+            <p id="sumÅrsag"></p>
+          </div>
+          <div>
+            <h3>Flyselskab</h3>
+            <p id="sumFlyselskab"></p>
+          </div>
+          <button id="reset_btn">Godkend</button>
+          </form>
+          <!-- <p class="placeholder">Opsummering</p> -->
         </article>
       </section>
     </main>
@@ -67,5 +183,6 @@
         </ul>
       </nav>
     </footer>
+    <script src="js/form.js"></script>
   </body>
 </html>
